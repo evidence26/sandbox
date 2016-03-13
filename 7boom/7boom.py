@@ -1,5 +1,7 @@
 BOOM="boom!"
 
+#This file can be found at: https://github.com/evidence26/sandbox/tree/master/7boom
+
 """
 Gets an int and returns its' 'boomified' version
 Args:
@@ -9,7 +11,7 @@ Args:
          - If the number has a 7 in it
          - The remainder of the number after division in 7 is zero
 
-         In any othe case, this methid will return the given number
+         In any othe case, this method will return the given number
 
 """
 def boomify(i):
