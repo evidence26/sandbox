@@ -1,5 +1,17 @@
 BOOM="boom!"
 
+"""
+Gets an int and returns its' 'boomified' version
+Args:
+    param1 (int): a non negative integer
+    
+    Returns the string defined by BOOM iff only one of the following conditions are met:
+         - If the number has a 7 in it
+         - The remainder of the number after division in 7 is zero
+
+         In any othe case, this methid will return the given number
+
+"""
 def boomify(i):
 	if((i%7 == 0) or ('7' in str(i))):
 		return BOOM
