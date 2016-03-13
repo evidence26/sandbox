@@ -14,16 +14,25 @@ subjects_and_grades=dict()
 studs=dict()
 
 
-#This is the main function, it gets a csv file representing a list of students and their grades in different subjcts.
-# It parses it and prints various statistics
-#
-# The first line of the file must contain a list of all the subjects (one word or more)
-# All the lines starting from the seond must begin with the students name, followed by the grades in each subject (numbers only)
+"""
+This is the main function, it gets a csv file representing a list of students and their grades in different subjects.
+It parses it and prints various statistics
+
+The first line of the input file must contain a list of all the subjects (each subject name may be one word or more)
+All the lines, starting from the second, must begin with the students name, followed by the grades in each subject (numbers only)
+
+*Each student must have exactly one grade per subject
+"""
 def main():
 	parse_csv(sys.argv[INPUT_FILE_INDEX])
 	print_stats()
 	
 
+"""
+This function gets a list of integers and returns a list with three members: the mean, median & variance of the integers in the given list
+
+The order of the members in the returned list is as specified by the globals: MEAN_INDEX, MEDIAN_INDEX & VAR_INDEX
+"""
 def calc_stats(num_list):
 	res=list()
 	res.append(statistics.mean(num_list))
@@ -33,6 +42,9 @@ def calc_stats(num_list):
 
 
 
+"""
+This function prints to the screen a list of all the statistics collected by this program in a nicely formatted fashion
+"""
 def print_stats():
 	print("stats")
 	
@@ -64,6 +76,10 @@ def print_stats():
 
 
 	
+"""
+A helper function for the main parsing function.
+Fills the global variables: subjects_and_grades & studs with relevant information (according to the parsed line it's given)
+"""
 def read_info(parse_info, subjects):
 	
 	stud_name=parse_info[STUDENT_NAME_INDEX]
@@ -80,6 +96,9 @@ def read_info(parse_info, subjects):
 
 
 
+"""
+This function gets a file in csv format (according to the format stated by the main function in this file) and parses it
+"""
 def parse_csv(csv_input_file):
 	with open(csv_input_file, 'r') as f:
 		reader = list(csv.reader(f))

@@ -1,0 +1,27 @@
+Hello & Welcome to the grades calculator!
+
+
+General
+-------
+This program gets as an input a csv-format file representing a list of students and their grades in different subjects.
+It parses it and prints various statistics
+
+Please note the following:
+	The first line of the input file must contain a list of all the subjects (each subject name may be one english word or more)
+	All the lines, starting from the second, must begin with the students name, followed by the grades in each subject (numbers only)
+
+	IMPORTANT: Each student must have exactly one grade per subject
+
+For your convenience I've added 2 example input files (the *.csv files)
+
+
+
+
+
+Usage
+-----
+
+Usage for this program: python calc_grades.py <input_file.csv>
+
+example:
+python calc_grades.py students_grades.csv
